@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECSC - Events</title>
+    <meta name="description" content="Sự kiện của Câu lạc bộ An ninh mạng EPU - ECSC.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Using event.css which imports about.css -->
+    <link rel="stylesheet" href="../style/event.css">
+</head>
+
+<body>
+    <div class="inner-border">
+        <canvas id="bg-canvas"></canvas>
+
+        <div class="event-return-container">
+            <a href="../index.html" class="nav-link event-return-link">&gt;return</a>
+        </div>
+
+        <main style="position: relative; z-index: 1;">
+            <div class="coming-soon-container">
+                <h1 class="main-title event-main-title">
+                    <span class="white-text">COMING</span> SOON<span class="red-text cursor-blink">_</span>
+                </h1>
+                <p class="event-subtitle">
+                    [ Loading next events... ]
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script src="../scripts/particles.js"></script>
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        if (canvas) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+:root {
+    --bg-navy: #102e50;
+    --border-yellow: #f5c45e;
+    --border-red: #be3d2a;
+    --text-white: #ffffff;
+    --font-heading: 'Silkscreen', cursive;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--border-yellow);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect x='18' y='10' width='4' height='4' fill='white' /%3E%3Crect x='14' y='14' width='12' height='4' fill='white' /%3E%3Crect x='18' y='18' width='4' height='4' fill='white' /%3E%3Crect x='70' y='40' width='3' height='3' fill='white' opacity='0.7'/%3E%3Crect x='67' y='43' width='9' height='3' fill='white' opacity='0.7'/%3E%3Crect x='70' y='46' width='3' height='3' fill='white' opacity='0.7'/%3E%3Crect x='40' y='80' width='4' height='4' fill='white' opacity='0.5'/%3E%3C/svg%3E");
+    height: 100vh;
+    padding: clamp(15px, 3.5vw, 70px);
+    font-family: var(--font-mono);
+    color: var(--text-white);
+    overflow: hidden;
+}
+
+.outer-border {
+    background-color: var(--border-red);
+    width: 100%;
+    height: 100%;
+    padding: clamp(4px, 0.6vw, 13px);
+}
+
+.inner-border {
+    background-color: var(--bg-navy);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;
+}
+
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Nav */
+header {
+    width: 100%;
+    padding-top: 3vh;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    letter-spacing: 0.1em;
+    transition: color 0.2s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '_';
+    position: absolute;
+    right: -15px;
+    opacity: 0;
+    color: var(--border-red);
+}
+
+.nav-link:hover {
+    color: var(--border-yellow);
+    transform: translateX(5px);
+    text-shadow: 2px 0 var(--border-red), -2px 0 var(--border-yellow);
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    animation: cursorBlink 0.8s step-end infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -5vh;
+    /* adjust for center visual balance */
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container {
+    width: min(280px, 30vw);
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    /* Removed drop-shadow because the SVG already has a built-in shadow layer */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    animation: hackerGlitch 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.red-text {
+    color: var(--border-red);
+}
+
+.subtitle {
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: hackerGlitch 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 2rem;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(35px, 3vw, 45px);
+    height: clamp(35px, 3vw, 45px);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.social-icon:hover {
+    transform: scale(1.15) translateY(-5px);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hackerGlitch {
+    0% {
+        opacity: 0;
+        transform: translate(-20px, 5px) skewX(-20deg);
+        text-shadow: 5px 0 var(--border-red), -5px 0 var(--border-yellow);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(15px, -3px) skewX(15deg);
+        text-shadow: -4px 0 var(--border-red), 4px 0 var(--border-yellow);
+    }
+
+    30% {
+        transform: translate(-10px, 2px) skewX(-10deg);
+        text-shadow: 3px 0 var(--border-red), -3px 0 var(--border-yellow);
+    }
+
+    45% {
+        transform: translate(5px, -1px) skewX(5deg);
+        text-shadow: -2px 0 var(--border-red), 2px 0 var(--border-yellow);
+    }
+
+    60% {
+        transform: translate(0px, 0px) skewX(0deg);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    70% {
+        transform: translate(-2px, 0px);
+        text-shadow: 2px 0 var(--border-red), -2px 0 var(--border-yellow);
+    }
+
+    80% {
+        transform: translate(0px, 0px);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .main-title {
+        font-size: clamp(1.5rem, 7vw, 3rem);
+        letter-spacing: 0.1em;
+    }
+
+    .subtitle {
+        padding: 0 1.5rem;
+        line-height: 1.6;
+    }
+
+    .logo-container {
+        width: min(160px, 45vw);
+        margin-bottom: 0.5rem;
+    }
+
+    body {
+        overflow-y: auto;
+        /* allow scrolling on mobile */
+    }
+}

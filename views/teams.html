@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECSC - Our Teams</title>
+    <meta name="description" content="Đội tuyển CTF chính thức của CLB ANM EPU - ECSC.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style/teams.css">
+</head>
+
+<body>
+    <div class="inner-border">
+        <canvas id="bg-canvas"></canvas>
+
+        <div style="padding: 30px 40px; position: relative; z-index: 10;">
+            <a href="../index.html" class="nav-link" style="font-size: 1.2rem; font-weight: bold;">&gt;return</a>
+        </div>
+
+        <main class="about-content">
+            <section class="hero-section">
+                <h1 class="main-title">
+                    <span class="white-text">OUR</span> <span class="red-text">TEAMS</span>
+                </h1>
+                <h2 class="subtitle yellow-text">ĐỘI TUYỂN CTF CỦA CÂU LẠC BỘ AN NINH MẠNG TRƯỜNG ĐẠI HỌC ĐIỆN LỰC</h2>
+
+
+            </section>
+
+            <div class="content-grid">
+
+                <!-- Team 1 -->
+                <div class="team-card red-border">
+                    <div class="team-header">
+                        <div>
+                            <h3 class="team-name">ECSC.C3l3st_W¥v3rn</h3>
+                            <div class="team-alias">Also known as: C3l3st_W¥v3rn, EPUIS</div>
+                        </div>
+                        <span class="shape-square red-bg"></span>
+                    </div>
+
+                    <div class="team-university">
+                        Academic team: <strong style="color: #64b5f6;">Electric Power University</strong>
+                    </div>
+
+                    <div class="terminal-box">
+                        <div class="terminal-line">
+                            <span class="cmd">whoami</span>
+                            <span class="output">EPU_CTF_Team</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="cmd">mission</span>
+                            <span class="output quote">"Breaking boundaries, securing the future."</span>
+                        </div>
+                    </div>
+
+                    <a href="https://ctftime.org/team/428617" target="_blank" rel="noopener noreferrer"
+                        class="ctftime-link">
+                        > CTFtime.org
+                    </a>
+                </div>
+
+                <!-- Team 2 -->
+                <div class="team-card yellow-border">
+                    <div class="team-header">
+                        <div>
+                            <h3 class="team-name">ECSC.ConMuaNgangQua</h3>
+                            <div class="team-alias">&nbsp;</div> <!-- Spacer to match height if needed -->
+                        </div>
+                        <span class="shape-square yellow-bg"></span>
+                    </div>
+
+                    <div class="team-university">
+                        Academic team: <strong style="color: #64b5f6;">Electric Power University</strong>
+                    </div>
+
+                    <div class="terminal-box">
+                        <div class="terminal-line">
+                            <span class="cmd">whoami</span>
+                            <span class="output">EPU_CTF_Team</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="cmd">mission</span>
+                            <span class="output quote">"Chilling"</span>
+                        </div>
+                    </div>
+
+                    <a href="https://ctftime.org/team/436823" target="_blank" rel="noopener noreferrer"
+                        class="ctftime-link" style="border-color: var(--border-red);">
+                        > CTFtime.org
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="../scripts/particles.js"></script>
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        if (canvas) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    </script>
+</body>
+
+</html>
