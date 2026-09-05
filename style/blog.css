@@ -24,6 +24,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .breadcrumb a {
@@ -73,6 +75,9 @@ body {
     border: 1px dashed var(--border-red);
     background: rgba(16, 46, 80, 0.8);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .toc-sidebar h3 {
@@ -250,6 +255,7 @@ body {
 
 .full-post {
     width: 100%;
+    min-width: 0; /* Fix CSS Grid min-content blowout */
     background-color: rgba(16, 46, 80, 0.8);
     border: 1px solid var(--border-red);
     padding: 2.5rem;
