@@ -14,16 +14,16 @@ body {
 
 /* Breadcrumbs */
 .breadcrumb {
-    padding: 30px 40px;
+    padding: 20px 30px;
     position: relative;
     z-index: 10;
     align-self: flex-start;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--border-yellow);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
     max-width: 100%;
 }
@@ -483,8 +483,31 @@ body {
     }
 
     .breadcrumb {
-        padding: 15px 10px;
-        font-size: 0.9rem;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .breadcrumb a:nth-child(1) {
+        font-size: 0;
+    }
+    .breadcrumb a:nth-child(1)::before {
+        content: '🏠';
+        font-size: 1.2rem;
+    }
+
+    .breadcrumb a:nth-child(3) {
+        font-size: 0;
+    }
+    .breadcrumb a:nth-child(3)::before {
+        content: '📝';
+        font-size: 1.2rem;
+    }
+
+    /* Hide the second separator and the long post title on mobile */
+    .breadcrumb :nth-child(4),
+    .breadcrumb :nth-child(5) {
+        display: none;
     }
     
     .post-body pre {
