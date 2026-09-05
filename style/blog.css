@@ -274,6 +274,8 @@ body {
 .post-body {
     line-height: 1.8;
     color: #e0e0e0;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .post-body h3 {
@@ -452,4 +454,34 @@ body {
     display: inline-block;
     margin-top: 4px;
     font-family: var(--font-mono);
+}
+
+/* Responsive adjustments for blog posts */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 10px;
+    }
+
+    .full-post {
+        padding: 15px;
+    }
+
+    .post-layout {
+        gap: 20px;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .breadcrumb {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .post-body pre {
+        padding: 1rem;
+    }
 }
