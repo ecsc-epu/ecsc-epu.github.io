@@ -489,18 +489,26 @@ body {
     }
 
     .breadcrumb a:nth-child(1) {
-        font-size: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
     .breadcrumb a:nth-child(1)::before {
-        content: '🏠';
+        content: '\f015'; /* fa-home */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
         font-size: 1.2rem;
     }
 
     .breadcrumb a:nth-child(3) {
-        font-size: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
     .breadcrumb a:nth-child(3)::before {
-        content: '📝';
+        content: '\f15c'; /* fa-file-alt */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
         font-size: 1.2rem;
     }
 
