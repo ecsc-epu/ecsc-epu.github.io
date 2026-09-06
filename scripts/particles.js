@@ -15,9 +15,11 @@ function init() {
         mouse.y = e.clientY - rect.top;
     });
     
-    document.addEventListener('mouseout', () => {
-        mouse.x = null;
-        mouse.y = null;
+    document.addEventListener('mouseout', (e) => {
+        if (!e.relatedTarget) {
+            mouse.x = null;
+            mouse.y = null;
+        }
     });
 
     // Create particles
@@ -47,8 +49,21 @@ class Particle {
         this.x += this.vx;
         this.y += this.vy;
 
-        if (this.x < 0 || this.x > width) this.vx = -this.vx;
-        if (this.y < 0 || this.y > height) this.vy = -this.vy;
+        if (this.x < 0) {
+            this.x = 0;
+            this.vx = Math.abs(this.vx);
+        } else if (this.x > width) {
+            this.x = width;
+            this.vx = -Math.abs(this.vx);
+        }
+
+        if (this.y < 0) {
+            this.y = 0;
+            this.vy = Math.abs(this.vy);
+        } else if (this.y > height) {
+            this.y = height;
+            this.vy = -Math.abs(this.vy);
+        }
     }
     draw() {
         ctx.beginPath();
