@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backdrop-filter: blur(3px);
             z-index: 1000;
             animation: fadeIn 0.4s ease-out;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .popup-content {
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="window-body">
                 <img src="assets/ctf_blog_cover.jpg" alt="CTF Cyberpunk Cover" class="popup-image">
                 <h2 class="popup-title">FOR BEGINNERS!</h2>
-                <p class="popup-text">Hãy tham khảo sau đây dành cho tân sinh viên nhé!</p>
+                <p class="popup-text">Chào mừng các tân sinh viên! Bạn đam mê An Toàn Thông Tin nhưng chưa biết bắt đầu từ đâu? Hãy tham khảo ngay lộ trình học tập chi tiết và hiệu quả nhất dưới đây nhé!</p>
                 <a href="views/posts/hoc-an-toan-thong-tin-bat-dau-tu-dau-va-nhu-the-nao.html" class="popup-btn">
                     Xem lộ trình ngay <i class="fa-solid fa-arrow-right"></i>
                 </a>
