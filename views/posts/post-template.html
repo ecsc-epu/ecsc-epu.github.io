@@ -42,8 +42,14 @@
             <main class="blog-container post-content-container">
                 <div class="post-layout">
                     <aside class="toc-sidebar">
-                        <h3>TABLE OF CONTENTS</h3>
-                        <ul>
+                        <input type="checkbox" id="toc-toggle" class="toc-toggle-checkbox">
+                        <div class="toc-header">
+                            <h3>Table of Content</h3>
+                            <label for="toc-toggle" class="toc-toggle-label">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
+                        <ul class="toc-list">
                             <li><a href="#section-1">1. Tiêu đề mục nhỏ 1</a></li>
                             <li><a href="#section-2">2. Tiêu đề mục nhỏ 2</a></li>
                         </ul>

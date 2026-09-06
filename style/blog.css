@@ -80,13 +80,31 @@ body {
     word-break: break-word;
 }
 
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-red);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.toc-toggle-checkbox {
+    display: none;
+}
+
+.toc-toggle-label {
+    display: none;
+    cursor: pointer;
+    color: var(--border-yellow);
+    font-size: 1.2rem;
+}
+
 .toc-sidebar h3 {
     font-family: var(--font-heading);
     color: var(--border-yellow);
     font-size: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-red);
-    padding-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .toc-sidebar ul {
@@ -118,6 +136,19 @@ body {
         position: relative;
         top: 0;
         margin-bottom: 2rem;
+    }
+    
+    .toc-toggle-label {
+        display: block;
+    }
+    
+    .toc-list {
+        display: none;
+        animation: fadeIn 0.3s ease-out;
+    }
+    
+    .toc-toggle-checkbox:checked ~ .toc-list {
+        display: block;
     }
 }
 
