@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECSC - Roadmap Web Security</title>
+    <meta name="description" content="Tài liệu Roadmap Web Security dành cho các thành viên định hướng mảng Web.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style/index.css">
+    <link rel="stylesheet" href="../../style/blog.css">
+</head>
+
+<body>
+    <div class="outer-border">
+        <div class="inner-border">
+            <canvas id="bg-canvas"></canvas>
+            <nav class="breadcrumb">
+                <a href="../../index.html">&gt; HOME</a>
+                <span class="separator">/</span>
+                <a href="../blog.html">BLOG</a>
+                <span class="separator">/</span>
+                <span class="active">ROADMAP WEB</span>
+            </nav>
+
+            <main class="blog-container post-content-container">
+                <div class="post-layout">
+                    <aside class="toc-sidebar">
+                        <input type="checkbox" id="toc-toggle" class="toc-toggle-checkbox">
+                        <div class="toc-header">
+                            <h3>Table of Content</h3>
+                            <label for="toc-toggle" class="toc-toggle-label">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
+                        <ul class="toc-list">
+                            <li><a href="#giai-doan-1">1. Giai đoạn 1: Web cơ bản</a></li>
+                            <li><a href="#giai-doan-2">2. Giai đoạn 2: Lập trình Web</a></li>
+                            <li><a href="#giai-doan-3">3. Giai đoạn 3: Web Security cơ bản</a></li>
+                            <li><a href="#web-sec-nang-cao">4. Web Security nâng cao</a></li>
+                        </ul>
+                    </aside>
+                    
+                    <article class="full-post">
+                        <img src="../../assets/web_security_cover.jpg" alt="Web Security Cover" class="post-cover-image">
+
+                        <div class="post-header">
+                            <h1 class="post-title">Roadmap Web Security</h1>
+                        </div>
+                    
+                    <div class="post-meta">
+                        <div class="post-author">
+                            <div class="author-avatar" style="background-color: var(--bg-navy); display: flex; align-items: center; justify-content: center; color: var(--border-yellow); font-size: 1.5rem;">
+                                <i class="fa-solid fa-user-secret"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Sheon</span>
+                                <span class="author-role">ECSC Member</span>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <span>#Web</span>
+                            <span>#Security</span>
+                            <span>#Roadmap</span>
+                        </div>
+                    </div>
+                    
+                    <div class="post-body">
+                        <p>Chào mọi người, dưới đây là tài liệu tham khảo về định hướng và lộ trình học tập mảng Web Security dành cho các bạn có niềm đam mê với Website. Lộ trình được đúc kết từ kinh nghiệm thực tế, chia thành các giai đoạn cụ thể để các bạn dễ theo dõi.</p>
+
+                        <h3 id="giai-doan-1">1. Giai đoạn 1: Web cơ bản (1-2 tháng)</h3>
+                        <h4>1.1. HTML, CSS, JavaScript</h4>
+                        <ul>
+                            <li><strong>HTML</strong></li>
+                            <li><strong>CSS:</strong> hiểu nó được dùng làm gì, ko cần lậm quá sâu.</li>
+                            <li><strong>Tài liệu:</strong>
+                                <ul>
+                                    <li>Học course "HTML, CSS từ Zero tới Hero" của F8, từ bài 1->32: <br><a href="https://www.youtube.com/watch?v=R6plN3FvzFY&list=PL_-VfJajZj0U9nEXa4qyfB4U5ZIYCMPlz" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">Link F8 Course</a></li>
+                                </ul>
+                            </li>
+                            <li><strong>JavaScript:</strong>
+                                <ul>
+                                    <li>Học "toàn bộ" course: <a href="https://www.youtube.com/watch?v=0SJE9dYdpps&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">Link JS Course</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>1.2. Các concept cơ bản trong web</h4>
+                        <ul>
+                            <li>Cấu trúc của URI, URL</li>
+                            <li>HTTP request, response có cấu trúc như thế nào, có các trường thông tin nào, các trường thông tin phục vụ mục đích gì.
+                                <ul>
+                                    <li>Phần này chỉ cần học sơ qua để phân biệt được GET, POST, PUT, DELETE, OPTIONS khác gì nhau.</li>
+                                    <li>Các trường phổ biến như: Host, Content-Type, Cookie,... có ý nghĩa gì. Phần này newbie thì học sơ qua, đến khi giải từng bài CTF sẽ hiểu hơn về các trường thông tin khác (sẽ giới thiệu về CTF sau)</li>
+                                </ul>
+                            </li>
+                            <li>Cách xem source code của web, Inspector. DevTools của trình duyệt</li>
+                            <li>Cookie, session, localStorage: hiểu cách web tracking người dùng như thế nào</li>
+                            <li>DNS, URL structure, encoding (URL encode, base64, HTML entity)</li>
+                        </ul>
+
+                        <h3 id="giai-doan-2">2. Giai đoạn 2: Biết cách lập trình 1 ứng dụng web và hiểu các concept nâng cao hơn (1-2 tháng)</h3>
+                        <h4>2.1. Lập trình 1 ứng dụng web sử dụng MVC</h4>
+                        <p>Ngôn ngữ lập trình có thể tuỳ chọn. Có thể chọn các ngôn ngữ cơ bản, dễ cho người mới có thể chọn NodeJS, PHP, Python. Hoặc nâng cao hơn như Java, C#.</p>
+                        <p>Mục tiêu là viết 1 ứng dụng web cơ bản sử dụng mô hình, có các chức năng như:</p>
+                        <ul>
+                            <li>Đăng ký/đăng nhập</li>
+                            <li>Upload file</li>
+                            <li>Một trang hiển thị dữ liệu từ database</li>
+                        </ul>
+                        <p>Muốn viết 1 web có chức năng này thì các bạn đã phải động đến các kiến thức như Cookie, Session (mục 1.2) và học cách viết SQL (lấy và hiển thị dữ liệu từ database)</p>
+
+                        <h4>2.2. Lập trình 1 ứng dụng web sử dụng mô hình front-end và back-end tách biệt</h4>
+                        <ul>
+                            <li>Sử dụng front-end tuỳ chọn: ReactJS, AngularJS, VueJS</li>
+                            <li>Back-end có thể sử dụng:
+                                <ul>
+                                    <li>Java (SpringBoot) -> giai đoạn này nên tập sử dụng các ngôn ngữ như Java, nâng độ khó và làm nền tảng để học các dạng lỗ hổng nâng cao hơn. Riêng Java sẽ có 1 note riêng</li>
+                                    <li>NodeJS (ExpressJS, NestJS)</li>
+                                    <li>... có rất nhiều ngôn ngữ khác, tuy nhiên do giai đoạn trước đã học các ngôn ngữ script đơn giản như JS, PHP, Python rồi thì giai đoạn này học ngôn ngữ có thông dịch để hiểu hơn về các cơ chế như run-time, build-time,....</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3 id="giai-doan-3">3. Giai đoạn 3: Web Security cơ bản</h3>
+                        <p><strong>Lưu ý:</strong> Khi học tới giai đoạn 2 đã có thể học web security song song với việc học lập trình, tìm hiểu thêm về các công cụ được sử dụng trong việc khai thác lỗ hổng web.</p>
+                        <p>Việc học lập trình web giúp ta có nền tảng để đi xa hơn, tuy nhiên để trở thành "hacker" thì ta cần rèn luyện mindset hacker.</p>
+                        <p>Để rèn luyện mindset như hacker thì cần bắt đầu học các lỗ hổng web cơ bản như:</p>
+                        <ul>
+                            <li>SQL injection: học SQL để code web rồi thì học luôn SQL injection</li>
+                            <li>XSS</li>
+                            <li>IDOR / Broken Access Control</li>
+                        </ul>
+
+                        <h4>3.1. Các nền tảng để học web security</h4>
+                        <p>Các bài nền tảng học web security để luyện tập có thể kể đến như:</p>
+                        <ul>
+                            <li>Root-me: <a href="https://www.root-me.org/" target="_blank" style="color: var(--border-yellow); text-decoration: underline;">https://www.root-me.org/</a></li>
+                            <li>Portswigger: <a href="https://portswigger.net/" target="_blank" style="color: var(--border-yellow); text-decoration: underline;">https://portswigger.net/</a></li>
+                        </ul>
+
+                        <p><strong>a. Root-me (mục Web Server):</strong></p>
+                        <p>Các dạng bài siêu dễ:</p>
+                        <ul>
+                            <li>HTML - Source code</li>
+                            <li>HTTP - IP restriction bypass</li>
+                            <li>HTTP - User-agent</li>
+                            <li>Weak password</li>
+                            <li>Backup file</li>
+                            <li>HTTP - Directory indexing</li>
+                            <li>HTTP - Headers</li>
+                            <li>HTTP - POST</li>
+                            <li>HTTP - Improper redirect</li>
+                            <li>HTTP - Verb tampering</li>
+                            <li>Install files</li>
+                            <li>HTTP - Cookies</li>
+                            <li>HTTP - Open redirect</li>
+                        </ul>
+
+                        <p><strong>b. Portswigger</strong></p>
+                        <p>Các lab có mức độ kiến thức cơ bản:</p>
+                        <ul>
+                            <li>SQL injection</li>
+                            <li>Path traversal</li>
+                            <li>Command injecton</li>
+                            <li>Information disclosure</li>
+                            <li>Business logic vulnerabilities</li>
+                            <li>File upload vulnerabilities</li>
+                            <li>Authentication</li>
+                            <li>Access control</li>
+                            <li>Cross-site scripting (XSS)</li>
+                            <li>Cross-site request forgery (CSRF)</li>
+                            <li>Cross-origin resource sharing (CORS)</li>
+                            <li>Clickjacking</li>
+                            <li>DOM-based vulnerabilities</li>
+                            <li>WebSockets</li>
+                            <li>Server-side template injection</li>
+                            <li>HTTP Host header attacks</li>
+                        </ul>
+                        <p>Thật ra trong đống này cũng ko phải cái gì cũng cơ bản đâu :)) Nhưng tinh thần là vừa làm vừa tìm hiểu thêm.</p>
+
+                        <h4>3.2. Học thêm các công nghệ mới, thịnh hành</h4>
+                        <ul>
+                            <li>Docker</li>
+                        </ul>
+
+                        <h3 id="web-sec-nang-cao">4. Web Security nâng cao</h3>
+                        <p>Các dạng lỗi ở phần này khá phức tạp, cần tìm hiểu thêm nhiều cơ chế liên quan để làm.</p>
+                        
+                        <p><strong>a. Portswigger</strong></p>
+                        <ul>
+                            <li><strong>Race conditions:</strong> Cần tìm hiểu thêm về các khái niệm trong hệ điều hành như thread, process</li>
+                            <li><strong>XXE injection:</strong> Cần tìm hiểu thêm về XML, XML là 1 công nghệ khá cũ. Tuy khá cũ nhưng hiện nay các framework trong Java vẫn thường sử dụng dạng công nghệ này.</li>
+                            <li><strong>NoSQL injection:</strong> Tìm hiểu thêm về các dạng database NoSQL như MongoDB</li>
+                            <li><strong>JWT attacks</strong></li>
+                            <li><strong>API testing:</strong> Học lập trình mô hình web ở mục 2.2 để có nền tảng hơn về phần này</li>
+                            <li><strong>Web cache deception, Web cache posoning:</strong> Cần tìm hiểu thêm về cơ chế cache. Đọc thêm về Redis, Memcached</li>
+                            <li><strong>GraphQL API vulnerabilities:</strong> Tìm hiểu thêm công nghệ GraphQL, một công nghệ khá hay trong việc xây dựng API</li>
+                            <li><strong>OAuth authentication:</strong> Tìm hiểu thêm về SSO, OAuth, OIDC. Thậm chí là cả SAML</li>
+                            <li><strong>HTTP request smuggling:</strong> Đây là 1 dạng lỗi mình đánh giá là khá hay, tác giả của lỗi này là James Kettle (albinowax). Cá nhân mình thấy một người nghĩ ra 1 dạng attack vector mới hoàn toàn như này xứng đáng được xếp vào dàn tinh hoa của nhân loại.</li>
+                            <li><strong>Prototype pollution & Insecure deserialization:</strong> 2 dạng lỗi phức tạp nhất khi học về web security. Đây là các dạng lỗi đi kèm theo "tính chất" của từng ngôn ngữ lập trình. Riêng về lỗi này sẽ dành ra 1 phần riêng.</li>
+                            <li><strong>Web LLM attacks:</strong> Một dạng lỗi "suýt mới" khi dần có các mô hình LLM được ra mắt</li>
+                        </ul>
+
+                        <p><strong>b. Root-me (Web-Server)</strong></p>
+                        <p>Làm nốt các dạng bài còn lại. Có thể nói khi học đến tầm này rồi thì các bạn đã có khả năng tự research và giải hết các dạng bài.</p>
+
+                        <p><strong>c. Các dạng lỗi nâng cao khác</strong></p>
+                        <ul>
+                            <li>SAML</li>
+                            <li>ZIP-slip: <a href="https://www.youtube.com/watch?v=5mapJQ7TFyc" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">https://www.youtube.com/watch?v=5mapJQ7TFyc</a></li>
+                        </ul>
+                        
+                        <!-- KẾT THÚC NỘI DUNG BÀI VIẾT -->
+                    </div>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="../../scripts/particles.js"></script>
+</body>
+
+</html>
