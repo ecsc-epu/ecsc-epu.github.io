@@ -54,6 +54,8 @@
                             <li><a href="#giai-doan-2">2. Giai đoạn 2: Lập trình Web</a></li>
                             <li><a href="#giai-doan-3">3. Giai đoạn 3: Web Security cơ bản</a></li>
                             <li><a href="#web-sec-nang-cao">4. Web Security nâng cao</a></li>
+                            <li><a href="#huong-di-tiep-theo">5. Hướng đi tiếp theo</a></li>
+                            <li><a href="#tham-khao">Tham khảo</a></li>
                         </ul>
                     </aside>
                     
@@ -225,6 +227,40 @@
                         <ul>
                             <li>SAML</li>
                             <li>ZIP-slip: <a href="https://www.youtube.com/watch?v=5mapJQ7TFyc" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">https://www.youtube.com/watch?v=5mapJQ7TFyc</a></li>
+                        </ul>
+                        
+                        <h3 id="huong-di-tiep-theo">5. Hướng đi tiếp theo</h3>
+                        
+                        <h4>5.1. Pentester</h4>
+                        <p><strong>5.1.1. Black-box & Grey-box pentest</strong></p>
+                        <p>Thường thì khi pentest bạn sẽ được cung cấp 1 hệ thống, có thể họ sẽ cung cấp cho bạn vài credentials trong hệ thống.</p>
+                        <p>Trường hợp chỉ cung cấp URL và không cung cấp thêm thông tin gì thì đây sẽ thuộc phần black-box pentest. Cá nhân mình thấy việc thực hiện black-box khá hiếm xảy ra khi đi làm, hoặc nó sẽ nằm vào phần Red Team, thông thường sẽ được cung cấp credentials để vào hệ thống - lúc này việc ta làm sẽ nằm vào scope grey-box pentest.</p>
+                        <p>Về black/grey-box pentest, mình gợi ý nền tảng: <strong>HackTheBox</strong>.</p>
+                        
+                        <p><strong>5.1.2. White-box pentest (Security code review)</strong></p>
+                        <p>Khi bạn được cung cấp source code của hệ thống thì giờ quá trình pentest có thể gọi là white-box pentest hay security code review.</p>
+                        <p>White-box pentest có thể giúp bạn kiểm tra được nhanh chóng hơn (với hầu hết các dạng lỗi), tuy nhiên việc được cung cấp source code thường chỉ diễn ra khi bạn làm security internal (nội bộ trong 1 tổ chức), còn khi làm cho các tổ chức cung cấp dịch vụ pentest thì hầu hết các bạn sẽ phải làm black hoặc grey box.</p>
+                        <p>Công việc làm security internal thường có ở các tổ chức tài chính như ngân hàng, chứng khoán,... hoặc là trong nhà nước, chính phủ. Các tổ chức này thường sử dụng các ngôn ngữ lập trình như: Java, C# (vì sự lớn mạnh và ổn định); ngoài ra thì mình thấy gần đây có những công ty tiên phong làm bằng các ngôn ngữ mới hơn như Go, JS (viết back-end) hoặc Python (các team data, AI thường dùng ngôn ngữ này, họ dùng cả trong việc làm data và đôi khi sử dụng luôn Python để viết ra các service web).</p>
+                        <p>Việc để học toàn bộ các ngôn ngữ, framework là rất khó và tốn thời gian. Mình khuyến khích các bạn học security review khoảng 2 ngôn ngữ trở lên, nhiều hơn thì càng tốt. Trong giai đoạn đầu khi chưa biết nhiều thì lời khuyên của mình về việc lựa chọn ngôn ngữ là bốc ra 2 ngôn ngữ có đặc trưng khác nhau, giả sử: học JavaScript rồi thì nên học Java thay vì học Python, học Java thì có thể thôi C#. Mình không bảo các ngôn ngữ kia không đáng học, tuy nhiên trong giai đoạn đầu khi kiến thức còn ít, việc lựa chọn ra 2 ngôn ngữ có đặc trưng khác nhau sẽ giúp bạn học được các class bug mà chỉ đặc trưng các ngôn ngữ đó mới có. Ví dụ như Prototype Pollution chỉ xuất hiện trong JavaScript và Python chứ không xuất hiện trong Java hay C#.</p>
+                        <p>Tham khảo repo huyền thoại về Java Security của pháp sư Trung Hoa: <a href="https://github.com/Y4tacker/JavaSec" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">https://github.com/Y4tacker/JavaSec</a></p>
+                        
+                        <p><strong>5.1.3. Mobile Pentest</strong></p>
+                        <p>Ngoài việc pentest trên web thì bạn có thể học thêm pentest mobile. Hầu hết các ứng dụng của các tổ chức giờ đều được viết trên mobile. Thật ra mobile pentest có thể nói nôm na giống 80% việc web pentest, vì sau một vài bước set up thì cuối cùng các bạn cũng sẽ quay qua pentest web; cái này thì mình sẽ đưa tài liệu rồi các bạn tự tìm hiểu lấy :)) Do không có thời gian giải thích lý do.</p>
+                        <p>Tham khảo series Android Mobile Pentest của anh tsug0d: <br><a href="https://github.com/tsug0d/AndroidMobilePentest101" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">https://github.com/tsug0d/AndroidMobilePentest101</a></p>
+                        <p>Ngoài ra thì mình thấy trên Hack The Box cũng có vài course để học Mobile Pentest, giá cả thì khoảng 6-7 triệu VNĐ thì phải. Cũng là một nguồn đáng để tham khảo.</p>
+                        
+                        <h4>5.2. Red Team</h4>
+                        <p><em>(Đang cập nhật...)</em></p>
+                        
+                        <h4>5.3. Security Research</h4>
+                        <p>Nếu như đi làm trên công ty mà rảnh quá thì các bạn có thể ngồi nghiên cứu thêm các target.</p>
+                        
+                        <h4>5.4. Bug Bounty</h4>
+                        <p><em>(Đang cập nhật...)</em></p>
+
+                        <h3 id="tham-khao">Tham khảo</h3>
+                        <ul>
+                            <li><a href="https://hackemall.live/index.php/2020/04/26/web-application-security-roadmap/" target="_blank" style="color: var(--border-yellow); text-decoration: underline; word-break: break-all;">https://hackemall.live/index.php/2020/04/26/web-application-security-roadmap/</a></li>
                         </ul>
                         
                         <!-- KẾT THÚC NỘI DUNG BÀI VIẾT -->
